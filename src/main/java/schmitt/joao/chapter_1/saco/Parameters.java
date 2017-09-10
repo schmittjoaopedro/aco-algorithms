@@ -13,22 +13,28 @@ public class Parameters {
 
     public static int source = 0;
 
-    public static int destination = 8;
+    public static int destination = 0;
 
     public static double pheromoneMin = 1.0;
 
     public static int antPopSize = 5;
 
-    public static int timeSize = 100;
+    public static int timeSize = 1000;
 
-    public static double antSpeed = 0.5;
+    public static double antSpeed = 1.0;
 
     public static double evaporation = 0.01;
+
+    public static double alpha = 2.0;
+
+    public static boolean pheromoneByPathLength = false;
 
     public static void configureExtendedDoubleBridge() {
         N = 19;
         graph = new double[N][N];
         pheromone = new double[N][N];
+        source = 0;
+        destination = 8;
 
         graph[0][1] = 1.0;
         graph[0][9] = 1.0;
@@ -81,6 +87,25 @@ public class Parameters {
         graph[18][16] = 1.0;
         graph[18][17] = 1.0;
 
+    }
+
+    public static void configureDoubleBridge() {
+        N = 5;
+        graph = new double[N][N];
+        pheromone = new double[N][N];
+        source = 0;
+        destination = 3;
+
+        graph[0][1] = 1.0;
+        graph[1][0] = 1.0;
+        graph[1][2] = 1.0;
+        graph[1][4] = 1.0;
+        graph[2][1] = 1.0;
+        graph[2][3] = 1.0;
+        graph[2][4] = 1.0;
+        graph[3][2] = 1.0;
+        graph[4][1] = 1.0;
+        graph[4][2] = 1.0;
     }
 
 }
