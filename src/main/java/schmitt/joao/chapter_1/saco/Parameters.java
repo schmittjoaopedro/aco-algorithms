@@ -108,4 +108,46 @@ public class Parameters {
         graph[4][2] = 1.0;
     }
 
+    public static void configureGenericGraph() {
+        N = 12;
+        graph = new double[N][N];
+        pheromone = new double[N][N];
+        source = 0;
+        destination = 11;
+
+        graph[0][5] = 1.0;
+        graph[1][2] = 1.0;
+        graph[2][1] = 1.0;
+        graph[2][3] = 1.0;
+        graph[2][5] = 1.0;
+        graph[2][7] = 1.0;
+        graph[3][2] = 1.0;
+        graph[3][6] = 1.0;
+        graph[3][7] = 1.0;
+        graph[4][5] = 1.0;
+        graph[5][0] = 1.0;
+        graph[5][2] = 1.0;
+        graph[5][4] = 1.0;
+        graph[5][6] = 1.0;
+        graph[5][8] = 1.0;
+        graph[5][9] = 1.0;
+        graph[6][3] = 1.0;
+        graph[6][5] = 1.0;
+        graph[6][7] = 1.0;
+        graph[6][9] = 1.0;
+        graph[6][10] = 1.0;
+        graph[7][6] = 1.0;
+        graph[7][11] = 1.0;
+        graph[8][5] = 1.0;
+        graph[9][5] = 1.0;
+        graph[9][6] = 1.0;
+        graph[9][10] = 1.0;
+        graph[10][6] = 1.0;
+        graph[10][9] = 1.0;
+        graph[10][11] = 1.0;
+        graph[11][7] = 1.0;
+        graph[11][10] = 1.0;
+
+    }
+
 }

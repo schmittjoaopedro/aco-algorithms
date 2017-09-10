@@ -1,5 +1,7 @@
 package schmitt.joao.chapter_1.saco;
 
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,18 +31,19 @@ public class SACO {
         for (int i = 0; i < 100; i++) {
             Parameters.timeSize = 1000;
             Parameters.evaporation = 0.01;
-            Parameters.antPopSize = 4;
+            Parameters.antPopSize = 5;
             Parameters.alpha = 2.0;
             Parameters.pheromoneByPathLength = true;
             execute();
         }
-        System.out.println("Long pheromone = " + countLongPheromone);
+        System.out.println("Longer = " + countLongPheromone);
     }
 
     public static void execute() {
 
         //Parameters.configureDoubleBridge();
         Parameters.configureExtendedDoubleBridge();
+        //Parameters.configureGenericGraph();
 
         Ant[] ants = new Ant[Parameters.antPopSize];
         for (int a = 0; a < ants.length; a++) {
